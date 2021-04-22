@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@0ahz/prettier-config': ^0.0.1
   '@sucrase/jest-plugin': ^2.1.0
   '@types/jest': ^26.0.22
   jest: ^26.6.3
@@ -9,6 +10,7 @@ specifiers:
   typescript: ^4.2.4
 
 devDependencies:
+  '@0ahz/prettier-config': 0.0.1
   '@sucrase/jest-plugin': 2.1.0
   '@types/jest': 26.0.22
   jest: 26.6.3
@@ -17,6 +19,10 @@ devDependencies:
   typescript: 4.2.4
 
 packages:
+
+  /@0ahz/prettier-config/0.0.1:
+    resolution: {integrity: sha512-rb02UA15JUxEyqm56xETrnJCM3HYU+Cx9Ibh4gKaCltwHHFaniGUZrEUMnpE29K+sd5d3MbSPrQPJNc4x1CHPQ==}
+    dev: true
 
   /@babel/code-frame/7.12.13:
     resolution: {integrity: sha512-HV1Cm0Q3ZrpCR93tkWOYiuYIgLxZXZFVG2VgK+MBWjUqZTundupbfx2aXarXuw5Ko5aMcjtJgbSs4vUGBS5v6g==}
