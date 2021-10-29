@@ -1,13 +1,10 @@
 {
   "name": "ts-lib-starter",
   "version": "0.0.0",
-  "description": "My awesome typescript library",
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "dist"
-  ],
+  "description": "Typescript library starter",
+  "repository": "0ahz/ts-lib-starter",
+  "license": "MIT",
+  "author": "YOUR NAME <YOUR EMAIL>",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "exports": {
@@ -15,6 +12,12 @@
     "import": "./dist/index.mjs"
   },
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "jest",
     "dev": "npm run build -- --watch",
@@ -23,7 +26,6 @@
     "prepublishOnly": "npm run build",
     "release": "bumpp --commit --push --tag && npm publish"
   },
-  "license": "MIT",
   "devDependencies": {
     "@0ahz/prettier-config": "^0.0.2",
     "@sucrase/jest-plugin": "^2.1.1",
