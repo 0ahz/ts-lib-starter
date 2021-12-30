@@ -22,8 +22,7 @@
     "test": "jest",
     "dev": "npm run build -- --watch",
     "start": "esno src/index.ts",
-    "build": "tsup src/index.ts --format cjs,esm --dts-resolve --minify",
-    "build-umd": "tsup src/index.ts --format iife --global-name libName --minify --sourcemap",
+    "build": "tsup",
     "prepublishOnly": "npm run build",
     "release": "bumpp --commit --push --tag && npm publish"
   },
@@ -31,12 +30,14 @@
     "@0ahz/prettier-config": "^0.0.2",
     "@sucrase/jest-plugin": "^2.2.0",
     "@types/jest": "^27.0.3",
+    "@typescript-eslint/parser": "^5.8.1",
     "bumpp": "^7.1.1",
-    "esno": "^0.12.1",
-    "jest": "^27.4.3",
-    "prettier": "^2.5.0",
-    "ts-jest": "^27.0.7",
-    "tsup": "^5.10.1",
-    "typescript": "^4.5.2"
+    "eslint": "^8.5.0",
+    "esno": "^0.13.0",
+    "jest": "^27.4.5",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.2",
+    "tsup": "^5.11.9",
+    "typescript": "^4.5.4"
   }
 }
