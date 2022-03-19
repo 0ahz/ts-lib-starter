@@ -20,6 +20,7 @@
   },
   "scripts": {
     "test": "jest",
+    "lint": "eslint ./src",
     "dev": "npm run build -- --watch",
     "start": "esno src/index.ts",
     "build": "tsup",
@@ -30,15 +31,16 @@
     "@0ahz/prettier-config": "^0.0.2",
     "@sucrase/jest-plugin": "^2.2.0",
     "@types/jest": "^27.4.1",
-    "@typescript-eslint/eslint-plugin": "^5.12.1",
-    "@typescript-eslint/parser": "^5.12.1",
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
     "bumpp": "^7.1.1",
-    "eslint": "^8.10.0",
+    "eslint": "^8.11.0",
+    "eslint-plugin-jest": "^26.1.1",
     "esno": "^0.14.1",
     "jest": "^27.5.1",
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.0",
     "ts-jest": "^27.1.3",
-    "tsup": "^5.11.13",
-    "typescript": "^4.5.5"
+    "tsup": "^5.12.1",
+    "typescript": "^4.6.2"
   }
 }

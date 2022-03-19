@@ -17,7 +17,6 @@ export default defineConfig(() => {
     globalName: 'MyLibName',
     format: ['cjs', 'esm', 'iife'],
     dts: {
-      input: 'src/index.ts',
       resolve: true,
     },
     banner: {
