@@ -9,18 +9,18 @@ export default defineConfig(() => {
       index: 'src/index.ts',
     },
     outdir: 'dist',
+    format: ['cjs', 'esm', 'iife'],
+    globalName: 'MyLibName',
     bundle: true,
     splitting: true,
     sourcemap: true,
     clean: true,
     minify: true,
-    globalName: 'MyLibName',
-    format: ['cjs', 'esm', 'iife'],
     dts: {
       resolve: true,
     },
     banner: {
-      js: `/** Copyright ${new Date().getFullYear()} ${pkg.name}_v${
+      js: `/** Copyright ${new Date().getFullYear()} ${pkg.license} ${pkg.name}_v${
         pkg.version
       } build at ${new Date().toLocaleString()} **/`,
     },

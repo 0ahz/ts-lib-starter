@@ -1,4 +1,4 @@
-import { foo } from './index'
+import { foo } from '../src'
 
 describe('foo', () => {
   it('foo', () => {
