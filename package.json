@@ -35,18 +35,18 @@
   },
   "devDependencies": {
     "@0ahz/prettier-config": "^0.0.2",
-    "@sucrase/jest-plugin": "^2.2.0",
+    "@sucrase/jest-plugin": "^2.2.1",
     "@types/jest": "^27.4.1",
-    "@typescript-eslint/eslint-plugin": "^5.18.0",
-    "@typescript-eslint/parser": "^5.18.0",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
     "bumpp": "^7.1.1",
-    "eslint": "^8.13.0",
-    "eslint-plugin-jest": "^26.1.4",
+    "eslint": "^8.14.0",
+    "eslint-plugin-jest": "^26.1.5",
     "esno": "^0.14.1",
     "jest": "^27.5.1",
     "prettier": "^2.6.2",
     "ts-jest": "^27.1.4",
-    "tsup": "^5.12.4",
-    "typescript": "^4.6.3"
+    "tsup": "^5.12.6",
+    "typescript": "^4.6.4"
   }
 }
