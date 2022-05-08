@@ -34,19 +34,19 @@
     "release": "bumpp --commit --push --tag && pnpm publish"
   },
   "devDependencies": {
-    "@0ahz/prettier-config": "^0.0.2",
+    "@0ahz/prettier-config": "^0.0.3",
     "@sucrase/jest-plugin": "^2.2.1",
-    "@types/jest": "^27.4.1",
-    "@typescript-eslint/eslint-plugin": "^5.21.0",
-    "@typescript-eslint/parser": "^5.21.0",
+    "@types/jest": "^27.5.0",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
     "bumpp": "^7.1.1",
-    "eslint": "^8.14.0",
+    "eslint": "^8.15.0",
     "eslint-plugin-jest": "^26.1.5",
     "esno": "^0.14.1",
-    "jest": "^27.5.1",
+    "jest": "^28.1.0",
     "prettier": "^2.6.2",
-    "ts-jest": "^27.1.4",
-    "tsup": "^5.12.6",
+    "ts-jest": "^28.0.1",
+    "tsup": "^5.12.7",
     "typescript": "^4.6.4"
   }
 }
