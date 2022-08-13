@@ -7,14 +7,15 @@
   "author": "YOUR NAME <YOUR EMAIL>",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
+    "types": "./dist/index.d.ts",
     "require": "./dist/index.js",
     "import": "./dist/index.mjs"
   },
   "browser": "./dist/index.global.js",
   "unpkg": "./dist/index.global.js",
   "jsdelivr": "./dist/index.global.js",
-  "types": "./dist/index.d.ts",
   "files": [
     "dist",
     "LICENSE",
@@ -36,14 +37,14 @@
   },
   "devDependencies": {
     "@0ahz/prettier-config": "^0.0.3",
-    "@typescript-eslint/eslint-plugin": "^5.31.0",
-    "@typescript-eslint/parser": "^5.31.0",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
     "bumpp": "^8.2.1",
     "camelcase": "^7.0.0",
-    "eslint": "^8.20.0",
+    "eslint": "^8.21.0",
     "prettier": "^2.7.1",
-    "tsup": "^6.2.0",
-    "tsx": "^3.8.0",
+    "tsup": "^6.2.2",
+    "tsx": "^3.8.2",
     "typescript": "^4.7.4",
     "vitest": "^0.17.1"
   }

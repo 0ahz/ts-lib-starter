@@ -15,7 +15,7 @@ export default defineConfig(() => {
       index: 'src/index.ts',
     },
     outdir: 'dist',
-    globalName: camelCase(pkg.name),
+    globalName: camelCase(pkg.name, { pascalCase: true }),
     format: ['cjs', 'esm', 'iife'],
     bundle: true,
     splitting: true,
@@ -25,10 +25,10 @@ export default defineConfig(() => {
     dts: {
       resolve: true,
     },
-    esbuildOptions(options, context) {
-      // https://esbuild.github.io/api/#simple-options
-      console.log(options, context)
-    },
+    // esbuildOptions(options, context) {
+    //   // https://esbuild.github.io/api/#simple-options
+    //   console.log(options, context)
+    // },
     onSuccess: `echo onSuccess`,
   }
 })

@@ -1,7 +1,6 @@
 module.exports = {
   root: true,
   env: {
-    jest: true,
     node: true,
     browser: true,
   },
@@ -14,6 +13,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
   ],
-  plugins: ['jest'],
+  plugins: [],
   rules: {},
 }
