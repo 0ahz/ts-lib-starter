@@ -1,11 +1,14 @@
+import fs from 'fs'
 import camelCase from 'camelcase'
 import { defineConfig } from 'tsup'
 
-import pkg from './package.json'
+import { name, version } from './package.json'
+
+const pkgName = name.replace('@', '').replace('/', '-')
 
 // https://tsup.egoist.sh/#using-custom-configuration
 // https://paka.dev/npm/tsup/v/5.12.4#module-index-export-Options
-export default defineConfig(() => {
+export default defineConfig(options => {
   return {
     // platform: 'node',
     // target: ['node16'],
@@ -15,20 +18,31 @@ export default defineConfig(() => {
       index: 'src/index.ts',
     },
     outdir: 'dist',
-    globalName: camelCase(pkg.name, { pascalCase: true }),
+    globalName: camelCase(pkgName),
     format: ['cjs', 'esm', 'iife'],
+    dts: {
+      resolve: true,
+    },
     bundle: true,
     splitting: true,
     sourcemap: true,
     clean: true,
-    minify: true,
-    dts: {
-      resolve: true,
-    },
+    minify: !options.watch,
+
     // esbuildOptions(options, context) {
     //   // https://esbuild.github.io/api/#simple-options
     //   console.log(options, context)
     // },
-    onSuccess: `echo onSuccess`,
+
+    onSuccess: async () => {
+      const oldFileName = 'index.global.js'
+      const fileName = `${pkgName}-${version}.js`
+      const fileContent = fs.readFileSync(`dist/${oldFileName}`).toString()
+      fs.writeFileSync(
+        `dist/${fileName}`,
+        fileContent.replace(oldFileName, fileName),
+      )
+      fs.copyFileSync(`dist/${oldFileName}.map`, `dist/${fileName}.map`)
+    },
   }
 })
