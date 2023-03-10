@@ -29,13 +29,21 @@ export default defineConfig(options => {
     clean: true,
     minify: !options.watch,
 
+    outExtension: ({ format }) => {
+      return {
+        js: `.${format}.js`,
+      }
+    },
+
+    esbuildPlugins: [],
+
     // esbuildOptions(options, context) {
     //   // https://esbuild.github.io/api/#simple-options
     //   console.log(options, context)
     // },
 
     onSuccess: async () => {
-      const oldFileName = 'index.global.js'
+      const oldFileName = 'index.iife.js'
       const fileName = `${pkgName}-${version}.js`
       const fileContent = fs.readFileSync(`dist/${oldFileName}`).toString()
       fs.writeFileSync(
