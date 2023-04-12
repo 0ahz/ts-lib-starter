@@ -17,7 +17,7 @@ export default defineConfig(options => {
     entry: {
       index: 'src/index.ts',
     },
-    outdir: 'dist',
+    outDir: 'dist',
     globalName: camelCase(pkgName),
     format: ['cjs', 'esm', 'iife'],
     dts: {
