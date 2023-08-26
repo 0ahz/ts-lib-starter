@@ -5,13 +5,11 @@
   "repository": "0ahz/ts-lib-starter",
   "license": "MIT",
   "author": "YOUR NAME <YOUR EMAIL>",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs.js",
+  "module": ".dist/index.esm.js",
   "exports": {
-    "types": "./dist/index.d.ts",
-    "require": "./dist/index.js",
-    "import": "./dist/index.mjs"
+    "require": "./dist/index.cjs.js",
+    "import": "./dist/index.esm.js"
   },
   "browser": "./dist/index.iife.js",
   "unpkg": "./dist/index.iife.js",
@@ -33,19 +31,19 @@
     "dev": "tsup --watch",
     "start": "tsx src/index.ts",
     "prepublishOnly": "pnpm run build",
-    "release": "bumpp && pnpm publish"
+    "release": "bumpp && pnpm publish --registry https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@0ahz/prettier-config": "^0.0.3",
-    "@typescript-eslint/eslint-plugin": "^5.58.0",
-    "@typescript-eslint/parser": "^5.58.0",
-    "bumpp": "^9.1.0",
-    "camelcase": "^7.0.1",
-    "eslint": "^8.38.0",
-    "prettier": "^2.8.7",
-    "tsup": "^6.7.0",
-    "tsx": "^3.12.6",
-    "typescript": "^5.0.4",
-    "vitest": "^0.30.1"
+    "@0ahz/prettier-config": "^0.0.4",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "bumpp": "^9.2.0",
+    "camelcase": "^8.0.0",
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.2",
+    "tsup": "^7.2.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.3"
   }
 }
