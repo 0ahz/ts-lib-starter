@@ -45,12 +45,14 @@ export default defineConfig(options => {
     onSuccess: async () => {
       const oldFileName = 'index.iife.js'
       const fileName = `${pkgName}-${version}.js`
-      const fileContent = fs.readFileSync(`dist/${oldFileName}`).toString()
-      fs.writeFileSync(
-        `dist/${fileName}`,
-        fileContent.replace(oldFileName, fileName),
-      )
+      const fileContent = fs
+        .readFileSync(`dist/${oldFileName}`)
+        .toString()
+        .replace(oldFileName, fileName)
+      fs.writeFileSync(`dist/${fileName}`, fileContent)
       fs.copyFileSync(`dist/${oldFileName}.map`, `dist/${fileName}.map`)
+      console.log(`dist/${fileName}`)
+      console.log(`dist/${fileName}.map`)
     },
   }
 })
