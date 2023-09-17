@@ -1,5 +1,5 @@
-import { version as VERSION } from '../package.json'
+import { version as VERSION, name as NAME } from '../package.json'
 
-export { VERSION }
+export { VERSION, NAME }
 
 export const foo = 'foo'
