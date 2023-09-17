@@ -31,19 +31,22 @@
     "dev": "tsup --watch",
     "start": "tsx src/index.ts",
     "prepublishOnly": "pnpm run build",
-    "release": "bumpp && pnpm publish --registry https://registry.npmjs.org/"
+    "release": "bumpp && pnpm publish --registry https://registry.npmjs.org/",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@0ahz/prettier-config": "^0.0.4",
-    "@typescript-eslint/eslint-plugin": "^6.6.0",
-    "@typescript-eslint/parser": "^6.6.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
     "bumpp": "^9.2.0",
     "camelcase": "^8.0.0",
     "eslint": "^8.49.0",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
     "tsup": "^7.2.0",
-    "tsx": "^3.12.8",
+    "tsx": "^3.12.10",
     "typescript": "^5.2.2",
-    "vitest": "^0.34.4"
+    "vitest": "^0.34.4",
+    "husky": "^8.0.0"
   }
 }
