@@ -36,17 +36,17 @@
   },
   "devDependencies": {
     "@0ahz/prettier-config": "^0.0.4",
-    "@typescript-eslint/eslint-plugin": "^6.7.0",
-    "@typescript-eslint/parser": "^6.7.0",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
     "bumpp": "^9.2.0",
     "camelcase": "^8.0.0",
-    "eslint": "^8.49.0",
-    "lint-staged": "^14.0.1",
+    "eslint": "^8.53.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
     "prettier": "^3.0.3",
     "tsup": "^7.2.0",
-    "tsx": "^3.12.10",
+    "tsx": "^4.1.0",
     "typescript": "^5.2.2",
-    "vitest": "^0.34.4",
-    "husky": "^8.0.0"
+    "vitest": "^0.34.6"
   }
 }
