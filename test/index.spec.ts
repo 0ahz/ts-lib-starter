@@ -1,9 +1,13 @@
 import { describe, expect, it } from 'vitest'
 
-import { foo } from '../src'
+import { name, version } from '../package.json'
 
-describe('foo', () => {
-  it('foo', () => {
-    expect(foo).toBe('foo')
+describe('PKG INFO', () => {
+  it('NAME: ' + name, () => {
+    expect(name).toBe(name)
+  })
+
+  it('VERSION: ' + version, () => {
+    expect(version).toBe(version)
   })
 })

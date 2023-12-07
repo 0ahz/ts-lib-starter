@@ -16,10 +16,11 @@ export default defineConfig(options => {
     target: ['chrome60', 'firefox60', 'safari11', 'edge18'],
     entry: {
       index: 'src/index.ts',
+      sub: 'src/sub.ts',
     },
     outDir: 'dist',
     globalName: camelCase(pkgName),
-    format: ['cjs', 'esm', 'iife'],
+    format: ['esm', 'cjs', 'iife'],
     dts: {
       resolve: true,
     },
@@ -29,12 +30,6 @@ export default defineConfig(options => {
     clean: true,
     minify: !options.watch,
 
-    outExtension: ({ format }) => {
-      return {
-        js: `.${format}.js`,
-      }
-    },
-
     esbuildPlugins: [],
 
     // esbuildOptions(options, context) {
@@ -43,7 +38,7 @@ export default defineConfig(options => {
     // },
 
     onSuccess: async () => {
-      const oldFileName = 'index.iife.js'
+      const oldFileName = 'index.global.js'
       const fileName = `${pkgName}-${version}.js`
       const fileContent = fs
         .readFileSync(`dist/${oldFileName}`)
