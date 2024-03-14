@@ -1,8 +1,10 @@
 import fs from 'node:fs'
 import typescript from '@rollup/plugin-typescript'
+// import typescript from 'rollup-plugin-typescript2'
 import json from '@rollup/plugin-json'
 import terser from '@rollup/plugin-terser'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
+import commonjs from '@rollup/plugin-commonjs'
 import { format } from 'date-fns'
 import camelCase from 'camelcase'
 
@@ -15,8 +17,13 @@ const parsedName = pkg.name
   .map(r => camelCase(r, { pascalCase: true }))
   .join('-')
 const globalName = camelCase(parsedName, { pascalCase: true })
-const outputFile = `${parsedName.toLowerCase()}-${pkg.version}.js`
-const outputMinFile = `${parsedName.toLowerCase()}-${pkg.version}.min.js`
+const fileName = [
+  parsedName.toLowerCase(),
+  // pkg.version,
+  //
+].join('-')
+const outputFile = `${fileName}.js`
+const outputMinFile = `${fileName}.min.js`
 const buildTime = format(new Date(), 'yyyy-MM-dd_HH:mm:ss_SSS')
 
 console.log({ globalName, outputFile, outputMinFile, buildTime })
@@ -47,6 +54,7 @@ export default [
     ],
     plugins: [
       json(),
+      commonjs(),
       nodeResolve(),
       typescript({ tsconfig: './tsconfig.json' }),
     ],
