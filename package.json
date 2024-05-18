@@ -67,6 +67,7 @@
     "@size-limit/preset-big-lib": "^11.1.4",
     "bumpp": "^9.4.1",
     "camelcase": "^8.0.0",
+    "changelogen": "^0.5.5",
     "date-fns": "^3.6.0",
     "dotenv": "^16.4.5",
     "eslint": "^9.3.0",
@@ -93,5 +94,6 @@
       "import": "{ bar }",
       "path": "dist/sub/index.cjs"
     }
-  ]
+  ],
+  "packageManager": "pnpm@9.1.1"
 }
