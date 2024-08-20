@@ -26,6 +26,18 @@ const outputFile = `${fileName}.js`
 const outputMinFile = `${fileName}.min.js`
 const buildTime = format(new Date(), 'yyyy-MM-dd_HH:mm:ss_SSS')
 
+const bannerFactory = (options = {}) => {
+  const { name, version, author, build } = Object.assign(
+    {
+      version: pkg.version,
+      author: pkg.author,
+      build: buildTime,
+    },
+    options,
+  )
+  return `/*!!\n * Copyright (c) 2022-PRESENT 0ahz (https://github.com/0ahz)\n * Name: ${name}\n * Version: ${version}\n * Author: ${author}\n * Build: ${build}\n*/`
+}
+
 console.log({ globalName, outputFile, outputMinFile, buildTime })
 
 export default [
@@ -39,7 +51,7 @@ export default [
         format: 'umd',
         dynamicImportInCjs: true,
         sourcemap: false,
-        banner: `/*!!\n * Copyright (c) 2016-PRESENT 52ydwf.com\n * Name: ${outputFile}\n * Version: ${pkg.version}\n * Author: ${pkg.author}\n * Build: ${buildTime}\n*/`,
+        banner: bannerFactory({ name: outputFile }),
       },
       {
         name: globalName,
@@ -48,7 +60,7 @@ export default [
         format: 'umd',
         dynamicImportInCjs: true,
         sourcemap: false,
-        banner: `/*!!\n * Copyright (c) 2016-PRESENT 52ydwf.com\n * Name: ${outputMinFile}\n * Version: ${pkg.version}\n * Author: ${pkg.author}\n * Build: ${buildTime}\n*/`,
+        banner: bannerFactory({ name: outputMinFile }),
         plugins: [terser({ format: { comments: /^!!/ } })],
       },
     ],
