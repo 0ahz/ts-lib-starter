@@ -2,14 +2,11 @@ import unjs from 'eslint-config-unjs'
 
 export default unjs(
   {
-    ignores: [
-      'dist',
-      'node_modules',
-      '.husky/install.mjs',
-    ],
+    ignores: ['dist', 'node_modules', '.husky/install.mjs'],
   },
   {
     rules: {
+      'unicorn/prefer-export-from': ['error', { ignoreUsedVariables: true }],
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
