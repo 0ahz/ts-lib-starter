@@ -86,6 +86,9 @@
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
   },
+  "lint-staged": {
+    "*.ts": ["prettier --list-different --write", "eslint"]
+  },
   "pnpm": {
     "onlyBuiltDependencies": [
       "simple-git-hooks"
