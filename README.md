@@ -24,13 +24,13 @@ MIT &copy; [0ahz](https://github.com/0ahz)
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/ts-lib-starter?style=flat&colorA=080f12&colorB=1fa669
-[npm-version-href]: https://npmjs.com/package/ts-lib-starter
-[npm-downloads-src]: https://img.shields.io/npm/dm/ts-lib-starter?style=flat&colorA=080f12&colorB=1fa669
-[npm-downloads-href]: https://npmjs.com/package/ts-lib-starter
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/ts-lib-starter?style=flat&colorA=080f12&colorB=1fa669&label=minzip
-[bundle-href]: https://bundlephobia.com/result?p=ts-lib-starter
+[npm-version-src]: https://img.shields.io/npm/v/0ahz_ts-lib-starter?style=flat&colorA=080f12&colorB=1fa669
+[npm-version-href]: https://npmjs.com/package/0ahz_ts-lib-starter
+[npm-downloads-src]: https://img.shields.io/npm/dm/0ahz_ts-lib-starter?style=flat&colorA=080f12&colorB=1fa669
+[npm-downloads-href]: https://npmjs.com/package/0ahz_ts-lib-starter
+[bundle-src]: https://img.shields.io/bundlephobia/minzip/0ahz_ts-lib-starter?style=flat&colorA=080f12&colorB=1fa669&label=minzip
+[bundle-href]: https://bundlephobia.com/result?p=0ahz_ts-lib-starter
 [license-src]: https://img.shields.io/github/license/0ahz/ts-lib-starter.svg?style=flat&colorA=080f12&colorB=1fa669
 [license-href]: https://github.com/0ahz/ts-lib-starter/blob/main/LICENSE
 [jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
-[jsdocs-href]: https://www.jsdocs.io/package/ts-lib-starter
+[jsdocs-href]: https://www.jsdocs.io/package/0ahz_ts-lib-starter
