@@ -86,9 +86,6 @@
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
   },
-  "lint-staged": {
-    "*": "eslint ./src --fix"
-  },
   "pnpm": {
     "onlyBuiltDependencies": [
       "simple-git-hooks"
