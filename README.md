@@ -1,5 +1,11 @@
 # ts-lib-starter
 
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![bundle][bundle-src]][bundle-href]
+[![JSDocs][jsdocs-src]][jsdocs-href]
+[![License][license-src]][license-href]
+
 ## Using this template
 
 - Search `ts-lib-starter` and replace it with your custom package name.
