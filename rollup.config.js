@@ -68,7 +68,15 @@ export default [
       json(),
       commonjs(),
       nodeResolve(),
-      typescript({ tsconfig: './tsconfig.json' }),
+      typescript({
+        tsconfig: './tsconfig.json',
+        exclude: [
+          'playground/**/*',
+          'examples/**/*',
+          'packages/**/*',
+          'docs/**/*',
+        ],
+      }),
     ],
   },
 ]
