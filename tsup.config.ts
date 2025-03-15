@@ -2,10 +2,7 @@ import { defineConfig } from 'tsup'
 
 export default defineConfig(options => {
   return {
-    // platform: 'node',
-    // target: ['node16'],
-    platform: 'browser',
-    target: ['es2020', 'chrome60', 'firefox60', 'safari11', 'edge18'],
+    target: ['es2020'],
     entry: {
       index: 'src/index.ts',
       'sub/index': 'src/sub/index.ts',
