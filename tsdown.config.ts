@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsup'
+import { defineConfig } from 'tsdown'
 
 export default defineConfig(options => {
   return {
@@ -8,9 +8,8 @@ export default defineConfig(options => {
       'sub/index': 'src/sub/index.ts',
     },
     outDir: 'dist',
-    format: ['cjs', 'esm'],
+    format: ['esm', 'cjs'],
     dts: true,
-    bundle: true,
     splitting: true,
     sourcemap: false,
     treeshake: true,
